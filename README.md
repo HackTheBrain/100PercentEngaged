@@ -1,7 +1,7 @@
 # Project 100 Percent Engaged
 An installation in which the individual and group engagement EEG scores are indiated through a type of LED interface. When the engagement score reaches a certain mark (0.7), the LEDs change colour.
 
-**Who**:
+## Who:
 
 - Polle van Duuren (Industrial Designer)
 - Carlos Moreira (Biomedical Engineer)
@@ -10,7 +10,7 @@ An installation in which the individual and group engagement EEG scores are indi
 
 We are a young group that is mostly just diving into this matter and curious where BCI can take us!
 
-**Why**
+## Why
 ----------
 We were interested in using BCI's to measure a group of people in a social context. Through an exploration of possibilities therein we pinned ourselves down on measuring Engagement using [beta/(aplha+theta)] as described in a number of scientic papers (see later).
 
@@ -19,7 +19,7 @@ We envisioned a situation where people in a social group (colleagues, teammember
 *Marketability*
 This could be relevant in a number of situations. During brainstorm sessions it could be interesting to see when certain ideas are actually interesting for everyone, during pitch presentations or lectures it could be interesting to see the general reactions of the audience, or for teambuilding it can be a challenge to achieve specific group goals.
 
-**What**
+## What
 
 We have build an installation in which the individual and group engagement scores are indiated through a type of LED interface. When the engagement score reaches a certain mark (0.7), the LEDs change colour.
 Moreover there is one interface that communicates the engagement of the whole group. Here we identified two different approaches:
@@ -29,7 +29,7 @@ We can work with the sum of frequency bands and treat all brains together as 1 b
 *Artistic value*
 Interestingly the second approach gives (slightly) different results than the first one. In this way we are treating the group as a whole as a separate entity, rather than the as a number of individuals. This artistic input is what we consider to be unique about our project: we are showing data of the 'groupbrain', which actually does not exist itself. We can dive a bit into philosophy here and discuss what it would then mean if there is such a thing as a separate group consciousness...
 
-**How**
+## How
 
 We have worked with Muse and wrote (with a lot of help) a code in Python to extract the values of all individuals, as well as the group. We then used Arduino to activate a number of RGB LEDs that change based on the different engagement scores. 
 
