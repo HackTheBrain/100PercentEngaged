@@ -40,10 +40,10 @@ Pope et al., Biocybernetic system evaluates indices of operator engagement in au
 *Novelty and scientific value*:
 Although measuring engagement of individuals in this way is not something new, using this to measure group engagement is something we have not come across. Through our installation we try to challenge scientist to consider how translate our current knowledge about individuals to groups, and what implications this would have on the group as entity.
 
-## Repository Documents:
-- Presentation PDF
+## Repository Files:
+- Presentation PDF *this is a copy of the slides that were presented during the hackathon*
 - Arduino code
 - Python code
 
 ## Other information:
-*This repository was made by specific group members and uploaded to a temporary environment. If any of those group members wish to administer this repository and manage the master branch, then they can contact the current administrator of the repository to gain the proper acces privileges to manage the master branch*
+*This repository was made by specific group members and uploaded to a temporary environment. This temporary environment has been manually transferred to a a more permanent Hack the Brain Github account. If any of the former team members wish to administer this repository and manage the master branch, then they can contact the current administrator of the repository to gain the proper acces privileges to manage the master branch*
