@@ -41,7 +41,7 @@ Pope et al., Biocybernetic system evaluates indices of operator engagement in au
 Although measuring engagement of individuals in this way is not something new, using this to measure group engagement is something we have not come across. Through our installation we try to challenge scientist to consider how translate our current knowledge about individuals to groups, and what implications this would have on the group as entity.
 
 ## Repository Files:
-- Presentation PDF *this is a copy of the slides that were presented during the hackathon*
+- Presentation PDF *(this is a copy of the slides that were presented during the hackathon)*
 - Arduino code
 - Python code
 
