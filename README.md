@@ -1,5 +1,5 @@
 # Project 100 Percent Engaged
-An installation in which the individual and group engagement EEG scores are indiated through a type of LED interface. When the engagement score reaches a certain mark (0.7), the LEDs change colour.
+An installation in which the individual and group engagement EEG scores are indiated through a type of LED interface. When the engagement score reaches a certain mark (0.7), the LEDs change colour. This project was started during the 2016 Hack the Brain Hackathon in Amsterdam at [Waag Society](http://www.waag.org)
 
 ## Who:
 - Polle van Duuren (Industrial Designer)
