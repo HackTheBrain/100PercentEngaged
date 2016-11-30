@@ -1,7 +1,7 @@
 # 100PercentEngaged
 An installation in which the individual and group engagement EEG scores are indiated through a type of LED interface. When the engagement score reaches a certain mark (0.7), the LEDs change colour.
 
-**Who:**:
+**Who**:
 
 - Polle van Duuren (Industrial Designer)
 - Carlos Moreira (Biomedical Engineer)
@@ -11,6 +11,7 @@ An installation in which the individual and group engagement EEG scores are indi
 We are a young group that is mostly just diving into this matter and curious where BCI can take us!
 
 **Why**
+
 We were interested in using BCI's to measure a group of people in a social context. Through an exploration of possibilities therein we pinned ourselves down on measuring Engagement using [beta/(aplha+theta)] as described in a number of scientic papers (see later).
 
 We envisioned a situation where people in a social group (colleagues, teammembers, etc) could individually be measured for their level of engagement. Also we could measure the engagement of the group as a whole.
