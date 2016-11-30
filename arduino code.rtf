@@ -1,0 +1,124 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
+{\fonttbl\f0\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red56\green12\blue62;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10640\viewh12480\viewkind0
+\deftab720
+\pard\pardeftab720\ql\qnatural
+
+\f0\fs26 \cf2 \cb3 // person1 leds\
+const int p1r = 13;\
+const int p1g = 12;\
+const int p1b = 11;\
+//person2 leds\
+const int p2r = 10;\
+const int p2g = 9;\
+const int p2b = 8;\
+// person3 leds\
+const int p3r = 7;\
+const int p3g = 6;\
+const int p3b = 5;\
+// group leds\
+const int grr = 4;\
+const int grg = 3;\
+const int grb = 2;\
+\
+//uncomment this line if using a Common Anode LED\
+#define COMMON_ANODE\
+\
+// code for timer\
+int incomingByte;\'a0\'a0\'a0\'a0\'a0 // a variable to read incoming serial data into\
+\
+void setup() \{\
+\'a0 // initialize serial communication:\
+\'a0 Serial.begin(9600);\
+\'a0 // initialize the LED pins as an output:\
+\'a0 pinMode(13, OUTPUT);\
+\'a0 pinMode(12, OUTPUT);\
+\'a0 pinMode(11, OUTPUT);\
+\'a0 pinMode(10, OUTPUT);\
+\'a0 pinMode(9, OUTPUT);\
+\'a0 pinMode(8, OUTPUT);\
+\'a0 pinMode(7, OUTPUT);\
+\'a0 pinMode(6, OUTPUT);\
+\'a0 pinMode(5, OUTPUT);\
+\'a0 pinMode(4, OUTPUT);\
+\'a0 pinMode(3, OUTPUT);\
+\'a0 pinMode(2, OUTPUT);\
+\'a0 \
+\}\
+\
+void loop() \{\
+\'a0 if (Serial.available() > 0) \{\'a0\'a0\'a0 // read the oldest byte in the serial buffer:\
+\'a0\'a0\'a0 incomingByte = Serial.read();\'a0 \
+\
+\'a0\'a0\'a0 if (incomingByte == 'a') \{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 //person 1 is engaged\
+\'a0\'a0\'a0 Color1 (30, 30, 30);\}\
+\'a0\'a0\'a0 if (incomingByte == 'b') \{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 //person 1 is engaged\
+\'a0\'a0\'a0 Color1 (255, 0, 0);\}\
+\
+\'a0\'a0\'a0 if (incomingByte == 'c') \{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 //person 2 is engaged\
+\'a0\'a0\'a0 Color2 (30, 30, 30);\}\
+\'a0\'a0\'a0 if (incomingByte == 'd') \{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 //person 2 is engaged\
+\'a0\'a0\'a0 Color2 (255, 0, 0);\}\
+\
+\'a0\'a0\'a0 if (incomingByte == 'e') \{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 //person 3 is engaged\
+\'a0\'a0\'a0 Color3 (30, 30, 30);\}\
+\'a0\'a0\'a0 if (incomingByte == 'f') \{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 //person 3 is engaged\
+\'a0\'a0\'a0 Color1 (255, 0, 0);\}\
+\
+\'a0\'a0\'a0 if (incomingByte == 'g') \{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 //person g is engaged\
+\'a0\'a0\'a0 Color1 (30, 30, 30);\}\
+\'a0\'a0\'a0 if (incomingByte == 'h') \{\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0 //person g is engaged\
+\'a0\'a0\'a0 Color1 (80, 0, 80);\}\
+\
+\'a0\'a0\'a0 \} \
+\'a0\'a0\'a0 \}\
+\'a0\'a0\'a0 \
+\
+\
+\
+\
+void Color1(int red, int green, int blue)\
+\{\
+\'a0 #ifdef COMMON_ANODE\
+\'a0\'a0\'a0 red = 255 - red;\
+\'a0\'a0\'a0 green = 255 - green;\
+\'a0\'a0\'a0 blue = 255 - blue;\
+\'a0 #endif\
+\'a0 analogWrite(p1r, red);\
+\'a0 analogWrite(p1g, green);\
+\'a0 analogWrite(p1b, blue);\'a0 \
+\}\
+void Color2(int red, int green, int blue)\
+\{\
+\'a0 #ifdef COMMON_ANODE\
+\'a0\'a0\'a0 red = 255 - red;\
+\'a0\'a0\'a0 green = 255 - green;\
+\'a0\'a0\'a0 blue = 255 - blue;\
+\'a0 #endif\
+\'a0 analogWrite(p2r, red);\
+\'a0 analogWrite(p2g, green);\
+\'a0 analogWrite(p2b, blue);\'a0 \
+\}\
+void Color3(int red, int green, int blue)\
+\{\
+\'a0 #ifdef COMMON_ANODE\
+\'a0\'a0\'a0 red = 255 - red;\
+\'a0\'a0\'a0 green = 255 - green;\
+\'a0\'a0\'a0 blue = 255 - blue;\
+\'a0 #endif\
+\'a0 analogWrite(p3r, red);\
+\'a0 analogWrite(p3g, green);\
+\'a0 analogWrite(p3b, blue);\'a0 \
+\}\
+void ColorG(int red, int green, int blue)\
+\{\
+\'a0 #ifdef COMMON_ANODE\
+\'a0\'a0\'a0 red = 255 - red;\
+\'a0\'a0\'a0 green = 255 - green;\
+\'a0\'a0\'a0 blue = 255 - blue;\
+\'a0 #endif\
+\'a0 analogWrite(grr, red);\
+\'a0 analogWrite(grg, green);\
+\'a0 analogWrite(grb, blue);\'a0 \
+\}}
