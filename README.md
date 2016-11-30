@@ -45,3 +45,5 @@ Although measuring engagement of individuals in this way is not something new, u
 - Arduino code
 - Python code
 
+## Other information:
+*This repository was made by specific group members and uploaded to a temporary environment. If any of those group members wish to administer this repository and manage the master branch, then they can contact the current administrator of the repository to gain the proper acces privileges to manage the master branch*
