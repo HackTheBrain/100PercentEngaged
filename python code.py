@@ -1,60 +1,60 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1038\cocoasubrtf360
-{\fonttbl\f0\fswiss\fcharset0 ArialMT;}
-{\colortbl;\red255\green255\blue255;\red26\green26\blue26;\red255\green255\blue255;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww10640\viewh12480\viewkind0
-\deftab720
-\pard\pardeftab720\ql\qnatural
+{rtf1\ansi ansicpg1252 cocoartf1038 cocoasubrtf360
+{fonttbl\f0\fswiss\fcharset0 ArialMT;}
+{colortbl;\red255\green255\blue255;\red26\green26\blue26;\red255\green255\blue255;}
+paperw11900\paperh16840\margl1440\margr1440\vieww10640\viewh12480\viewkind0
+deftab720
+pard\pardeftab720\ql\qnatural
 
 \f0\fs26 \cf2 \cb3 from liblo import *\
-import sys\
-import os\
-import time\
-import copy\
-import serial\
-\
+import sys
+import os
+import time
+import copy
+import serial
+
 ser = serial.Serial('/dev/tty.usbmodem1411', 9600)\
-\
+
 try:\
-\'a0 \'a0 ports = list(sys.argv)[1:]\
+'a0 \'a0 ports = list(sys.argv)[1:]\
 except:\
-\'a0 \'a0 ports = [5000]\
-\
-\
-alpha_sums = []\
-beta_sums = []\
-theta_sums = []\
-\
-ratio2 = []\
-\
-\
-class MuseServer(ServerThread):\
-\
-\'a0 \'a0 def __init__(self, port=5432):\
-\'a0 \'a0 \'a0 \'a0 self.signal = \{\}\
-\'a0 \'a0 \'a0 \'a0 self.signal['eeg'] = []\
-\'a0 \'a0 \'a0 \'a0 self.signal['alpha_rel'] = []\
-\'a0 \'a0 \'a0 \'a0 self.signal['alpha_abs'] = []\
-\'a0 \'a0 \'a0 \'a0 self.signal['conc'] = []\
-\'a0 \'a0 \'a0 \'a0 self.signal['mel'] = []\
-\'a0 \'a0 \'a0 \'a0 self.signal['mel'] = []\
-\'a0 \'a0 \'a0 \'a0 self.signal['beta_abs'] = []\
-\'a0 \'a0 \'a0 \'a0 self.signal['theta_abs'] = []\
-\
-\'a0 \'a0 \'a0 \'a0 ServerThread.__init__(self, port)\
-\
-\'a0 \'a0 # receive accelrometer data\
-\'a0 \'a0 @make_method('/muse/acc', 'fff')\
-\'a0 \'a0 def acc_callback(self, path, args):\
-\'a0 \'a0 \'a0 \'a0 acc_x, acc_y, acc_z = args\
-\'a0 \'a0 \'a0 \'a0 # print "%s %f %f %f" % (path, acc_x, acc_y, acc_z)\
-\
-\'a0 \'a0 # receive EEG data\
-\'a0 \'a0 @make_method('/muse/eeg', 'ffff')\
-\'a0 \'a0 def eeg_callback(self, path, args):\
-\'a0 \'a0 \'a0 \'a0 self.signal['eeg'].append(args)\
-\
-\'a0 \'a0 \'a0 \'a0 # receive alpha relative data\
-\'a0 \'a0 @make_method('/muse/elements/alpha_relative', 'ffff')\
+'a0 \'a0 ports = [5000]\
+
+
+alpha_sums = []
+beta_sums = []
+theta_sums = []
+
+ratio2 = []
+
+
+class MuseServer(ServerThread):
+
+def __init__(self, port=5432):\
+self.signal = \{\}\
+self.signal['eeg'] = []\
+self.signal['alpha_rel'] = []\
+self.signal['alpha_abs'] = []\
+self.signal['conc'] = []\
+self.signal['mel'] = []\
+self.signal['mel'] = []\
+self.signal['beta_abs'] = []\
+self.signal['theta_abs'] = []\
+
+ServerThread.__init__(self, port)
+
+# receive accelrometer data
+@make_method('/muse/acc', 'fff')
+def acc_callback(self, path, args):
+acc_x, acc_y, acc_z = args\
+# print "%s %f %f %f" % (path, acc_x, acc_y, acc_z)\
+
+# receive EEG data\
+@make_method('/muse/eeg', 'ffff')\
+def eeg_callback(self, path, args):\
+self.signal['eeg'].append(args)\
+
+# receive alpha relative data\
+@make_method('/muse/elements/alpha_relative', 'ffff')\
 \'a0 \'a0 def alpha_callback(self, path, args):\
 \'a0 \'a0 \'a0 \'a0 self.signal['alpha_rel'].append(args)\
 \
