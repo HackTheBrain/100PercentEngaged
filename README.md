@@ -48,4 +48,5 @@ Although measuring engagement of individuals in this way is not something new, u
 ## Other information:
 *This repository was made by specific group members and uploaded to a temporary environment. This temporary environment has been manually transferred to a a more permanent Hack the Brain Github account. If any of the former team members wish to administer this repository and manage the master branch, then they can contact the current administrator of the repository to gain the proper acces privileges to manage the master branch*
 
-[![Polle van duuren](http://handledmovie.com/get/player01.gif)](https://vimeo.com/177942705)
+## Video on Project 100 Percent Egaged:
+[![Video image](http://handledmovie.com/get/player01.gif)](https://vimeo.com/177942705)
