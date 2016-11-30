@@ -177,5 +177,5 @@ if __name__ == "__main__":\
 \'a0 \'a0 \'a0 \'a0 if (total_beta / (total_alpha + total_theta)) > 0.7:\
 \'a0 \'a0 \'a0 \'a0 \'a0 \'a0 ser.write("g")\
 \'a0 \'a0 \'a0 \'a0 if (total_beta / (total_alpha + total_theta)) < 0.7:\
-\'a0 \'a0 \'a0 \'a0 \'a0 \'a0 ser.write("h")\
+ser.write("h")\
 }
