@@ -1,16 +1,16 @@
-// person1 leds\
+// person1 leds
 const int p1r = 13;
 const int p1g = 12;
 const int p1b = 11;
-//person2 leds\
+//person2 leds
 const int p2r = 10;
 const int p2g = 9;
 const int p2b = 8;
-// person3 leds\
+// person3 leds
 const int p3r = 7;
 const int p3g = 6;
 const int p3b = 5;
-// group leds\
+// group leds
 const int grr = 4;
 const int grg = 3;
 const int grb = 2
@@ -74,7 +74,7 @@ Color1 (80, 0, 80);
 } 
 }
 
-void Color1(int red, int green, int blue)\
+void Color1(int red, int green, int blue)
 {
 #ifdef COMMON_ANODE
 red = 255 - red;
